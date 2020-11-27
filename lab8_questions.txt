@@ -1,0 +1,25 @@
+1. Copie des fichiers nécessaires avec cp
+
+2. "gcc -Wall -c min.c max.c" -> Compilation et génération des *.o
+
+3. "ar -r liboutils.a max.o min.o" -> création de l'archive bibliothèque
+
+4. "ar -t liboutils.a" -> affiche les fichiers objets présents :: les fichiers sont bien présent
+
+5. "ranlib liboutils.a" -> permet de créer un index qui permet d'accélérer la phase d'édition de liens.
+
+6. J'ai move et gedit le test.c du LAB7 et tout est bon
+
+7. Création des répertoires avec mkdir 
+
+8. "mv min.h max.h ./opt/include"
+   "mv liboutils.a ./opt/lib"
+
+9."gcc main.c -L./opt/lib -I./opt/include -loutils -o prog_q9"
+
+10. Génération de l'executable -> affichage du maximum et minimum
+
+11. Récupération des fichiers var.c et var.h avec cp
+
+
+
