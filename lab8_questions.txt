@@ -28,5 +28,20 @@
 12. Vérification du rajout "ar -t ./opt/lib/liboutils.a"
  Suppression du fichier innutile "rm var.o"
 
+13. Regénération de l'archive avec "ranlib ./opt/lib/liboutils.a"
+ Vérification du rajout avec "nm -s ./opt/lib/liboutils.a"
+ On remarque que le fichier var.o a été bien rajouté à l'archive
+
+14. Modification du main.c pour rajouter la variance.
+ Génération de l'executable avec "gcc main.c -L./opt/lib -I./opt/include -loutils -o prog_q14"
+ Vérification du bon fonctionnement avec "./prog_q14"
+ On constate que le min, max et la variance sont bien calculées.
+
+15. On rajoute la bibliothèque <math.h> et les fonctions floor et ceil dans le main.c
+
+16. On compile avec la fonction "gcc main.c -L./opt/lib -I./opt/include -loutils -lm -o prog_q16"
+ On execute avec "./prog_q16"
+ On constate que la fonction ceil arrondi au suppérieur et la fonction floor arrondi au inférieur.
+
 
 
